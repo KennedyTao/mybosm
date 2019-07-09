@@ -1,0 +1,24 @@
+<!--pages/useBike/startByBikeNo/start.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page_hd">
+        <view class="weui-cells__title">解锁单车</view>
+
+        <form bindsubmit='startFormSubmit'>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">单车号:</view>
+                    </view>
+
+                    <view class="weui-cell__hd">
+                        <input class="weui-input" name="bikeNo" bindinput='bikeNoInput' auto-focus />
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary" form-type="submit">确定</button>
+            </view>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/wxml/event",
+    "pages/userRegister/userRegister",
+    "pages/msg/msg",
+    "pages/userPage/userPage",
+    "pages/userInfo/userInfo",
+    "pages/about/about",
+    "pages/rent/rent",
+    "pages/msg/msg_success",
+    "pages/msg/msg_fail",
+    "pages/useBike/startByBikeNo/start",
+    "pages/useBike/countingTime/countingTime",
+    "pages/useBike/settleAccount/settleAccount",
+    "pages/useBike/resMsg/res",
+    "pages/lease/leaseInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息用于地图显示"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": true
+}

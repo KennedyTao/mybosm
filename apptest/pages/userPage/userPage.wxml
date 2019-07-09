@@ -1,0 +1,4 @@
+<!--pages/userPage/userPage.wxml-->
+<map id='myMap' longitude='{{longitude}}' latitude='{{latitude}}' controls='{{controls}}' markers='{{markers}}'
+    show-location='true' scale='17' bindcontroltap='mycontroltap' bindregionchange='regionChange'>
+</map>

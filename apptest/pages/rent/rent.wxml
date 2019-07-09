@@ -1,0 +1,42 @@
+<!--pages/rent/rent.wxml-->
+<view class='page'>
+  <view class="page__bd">
+    <view class="weui-panel">
+        <view class="weui-panel__hd">押金充值</view>
+
+        <view class="weui-panel__bd" wx:if="{{userStatus != 0}}">
+            <view class="weui-msg">
+              <view class="weui-msg__icon-area">
+                  <icon type="success" size="93"></icon>
+              </view>
+              <view class="weui-msg__text-area">
+                  <view class="weui-msg__title">已充值押金</view>
+                  <view class="weui-msg__desc">您已充值押金￥{{rent}}, 您可以随时退还</view>
+              </view>
+              <view class="weui-msg__opr-area">
+                  <view class="weui-btn-area">
+                      <button class="weui-btn" type="primary" bindtap='rentBack'>退还押金</button>
+                  </view>
+              </view>
+            </view>
+        </view>
+
+        <view class="weui-panel__bd" wx:else>
+            <view class="weui-msg">
+                <view class="weui-msg__icon-area">
+                    <icon type="warn" size="93"></icon>
+                </view>
+                <view class="weui-msg__text-area">
+                    <view class="weui-msg__title">您仍未充值押金</view>
+                    <view class="weui-msg__desc">押金￥199, 您可以随时退还,重置后可以立刻用车</view>
+                </view>
+                <view class="weui-msg__opr-area">
+                    <view class="weui-btn-area">
+                        <button class="weui-btn" type="primary" bindtap='rentPay'>充值押金</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>

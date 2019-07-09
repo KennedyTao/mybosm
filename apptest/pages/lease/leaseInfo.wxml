@@ -1,0 +1,27 @@
+<!--pages/lease/leaseInfo.wxml-->
+<!-- <wxs module="formatTime" src="/utils/util.js"> -->
+
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">租赁历史</view>
+        <view class="page__desc">若没有金额，请您跳转完成支付</view>
+    </view>
+    <view class="page__bd" wx:if="{{!hasLease}}">
+        <view class="page__desc">暂时没有租赁信息，先去租车吧</view>
+    </view>
+    <view class="page__bd" wx:else>
+        <view class="weui-cells__title">租赁历史</view>
+        <view class="weui-cells weui-cells_after-title" wx:for-items="{{leaseList}}" wx:for-item="lease" wx:key="key">
+
+            <view class="weui-cell" wx:if="{{lease.lstatus == 1}}">
+                <view class="weui-cell__bd">{{lease.startTime}} 骑行{{lease.spendTime}}s</view>
+                <view class="weui-cell__ft">￥{{lease.cost}}</view>
+            </view>
+
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:else data-lno='{{lease.lno}}' data-cost='{{lease.cost}}' bindtap='toPay'>
+                <view class="weui-cell__bd">{{lease.startTime}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+    </view>
+</view>

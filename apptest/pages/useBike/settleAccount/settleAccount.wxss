@@ -1,0 +1,4 @@
+/* pages/useBike/settleAccount/settleAccount.wxss */
+.weui-form-preview{
+    margin-bottom: 25px;
+}

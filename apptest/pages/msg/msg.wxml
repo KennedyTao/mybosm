@@ -1,0 +1,20 @@
+<!--pages/msg/msg_success.wxml-->
+<view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="93" wx:if="{{user}}"></icon>
+            <icon type="warn" size="93" wx:else></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title" wx:if="{{user}}"><text>欢迎您,{{user.username}}</text></view>
+            <view class="weui-msg__title" wx:else><text>登录失败</text></view>
+          
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary">推荐操作</button>
+                <button class="weui-btn" type="default">辅助操作</button>
+            </view>
+        </view>
+    </view>
+</view>

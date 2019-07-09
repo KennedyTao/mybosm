@@ -1,0 +1,25 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">Welcome,{{userInfo.nickName}}</view>
+        <view class="page__desc">个人页面</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-grids">
+            <!-- <block wx:for="{{grids}}" wx:key="*this"> -->
+              <navigator url="/pages/rent/rent" class="weui-grid" hover-class="weui-grid_active">
+                  <image class="weui-grid__icon" src="/images/wallet.png" />
+                  <view class="weui-grid__label">押金</view>
+              </navigator>
+              <navigator url="/pages/lease/leaseInfo" class="weui-grid" hover-class="weui-grid_active">
+                  <image class="weui-grid__icon" src="/images/order.png" />
+                  <view class="weui-grid__label">租赁历史</view>
+              </navigator>
+              <navigator url="/pages/about/about" class="weui-grid" hover-class="weui-grid_active">
+                  <image class="weui-grid__icon" src="/images/about.png" />
+                  <view class="weui-grid__label">关于</view>
+              </navigator>
+            <!-- </block> -->
+        </view>
+    </view>
+</view>

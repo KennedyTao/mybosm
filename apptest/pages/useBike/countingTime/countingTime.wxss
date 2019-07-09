@@ -1,0 +1,9 @@
+/* pages/useBike/countingTime/countingTime.wxss */
+.time{
+    text-align: center;
+    width: 100%;
+    flex: 6;
+}
+.time .time-content{
+    font-size: 100rpx;
+}

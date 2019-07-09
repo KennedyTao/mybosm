@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+
+  <!-- <navigator url='../logs/logs?id=100&title=标题'>
+  <view>
+    <text class='title1'>文章1</text>
+  </view>
+  </navigator>
+
+  <view>
+    <text class='title2' bindtap='itemClick'>文章2</text>
+  </view>
+
+  <button bindtap='toEvent'>视图层WXML:事件</button> -->
+
+  <button class='weui-btn' type='primary' open-type='getUserInfo' bindgetuserinfo='toUserRegister'>用户注册</button>
+
+  <button class='weui-btn' type='warn' open-type='getUserInfo' bindgetuserinfo='userLogin'>微信登录</button>
+
+  <!-- <button class='weui-btn' type='primary' bindtap='toUserPage'>前往主页</button> -->
+</view>
